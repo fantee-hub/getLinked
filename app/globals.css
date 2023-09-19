@@ -16,12 +16,21 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    box-sizing: border-box;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    word-break: break-word;
+  }
+  *[class*="hover:"] {
+    transition: color 0.4s, background-color 0.4s, left 0.4s, opacity 0.4s,
+      transform 0.4s;
+  }
+  body {
+    @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto;
+  }
 }
