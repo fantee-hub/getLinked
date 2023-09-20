@@ -12,7 +12,7 @@ const Nav = () => {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname]);
+  }, [isActive, pathname]);
   return (
     <nav className="border-b border-white border-opacity-20 sm:px-8 px-10">
       <section className="max-w-[1256px] mx-auto lg:pt-16 lg:pb-6 py-7 flex justify-between items-center">
