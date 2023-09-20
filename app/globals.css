@@ -36,4 +36,17 @@
   ul {
     @apply list-none;
   }
+  .animated-line path {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 40;
+    animation: dash 0.5s linear;
+  }
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 40;
+    }
+  }
 }
