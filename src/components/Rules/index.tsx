@@ -5,11 +5,11 @@ import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG 2.png";
 
 const Rules = () => {
   return (
-    <section className="px-10 border-b border-white border-opacity-20">
+    <section className="px-10 border-b border-white border-opacity-20 relative">
       <div className="absolute top-[-250px] left-[-50px] opacity-50 -z-30">
         <img src={flare1.src} alt="flare" className="w-full" />
       </div>
-      <div className="absolute top-[100px] right-[0px] opacity-50 -z-30">
+      <div className="absolute top-[200px] right-[0px] opacity-50 -z-30">
         <img src={flare2.src} alt="flare" className="w-full" />
       </div>
       <div className="flex items-center justify-center">
