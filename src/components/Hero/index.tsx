@@ -30,53 +30,55 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="max-w-[1456px] mx-auto px-10 relative">
-      <div className="font-bold text-[36px] italic text-right  relative pt-8">
-        {currentText}
-        <div className="absolute bottom-[-16px] right-10">
-          {isTyping && (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="255"
-              height="17"
-              viewBox="0 0 255 17"
-              fill="none"
-              className="animated-line"
-            >
-              <path
-                d="M1 14.043C43.3333 5.7097 154.4 -5.95697 254 14.043"
-                stroke="#FF26B9"
-                stroke-width="3"
-              />
-            </svg>
-          )}
-        </div>
-      </div>
+    <section className="relative border-b border-white border-opacity-20 ">
+      <img
+        src={flare.src}
+        alt="flare"
+        className="absolute top-[-250px] left-[-50px] opacity-30 -z-30"
+      />
 
-      <div>
-        <motion.div variants={heroBanner} initial="initial" animate="animate">
-          <img
-            src={flare.src}
-            alt="flare"
-            className="absolute top-[-250px] left-[-50px] opacity-30 -z-30"
-          />
-          <motion.img
-            variants={fadeInAnimation}
-            custom={3}
-            src={star.src}
-            alt="star"
-            className="absolute top-0 left-10"
-          />
-          <motion.img
-            variants={fadeInAnimation}
-            custom={2}
-            src={fadeStar.src}
-            alt="star"
-            className="absolute left-[60%] top-[50px]"
-          />
-        </motion.div>
-      </div>
-      {isTyping && (
+      <div className="max-w-[1400px] mx-auto px-10 overflow-hidden">
+        <div className="font-bold text-[36px] italic text-right  relative pt-8">
+          {currentText}
+          <div className="absolute bottom-[-16px] right-10">
+            {isTyping && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="255"
+                height="17"
+                viewBox="0 0 255 17"
+                fill="none"
+                className="animated-line"
+              >
+                <path
+                  d="M1 14.043C43.3333 5.7097 154.4 -5.95697 254 14.043"
+                  stroke="#FF26B9"
+                  stroke-width="3"
+                />
+              </svg>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <motion.div variants={heroBanner} initial="initial" animate="animate">
+            <motion.img
+              variants={fadeInAnimation}
+              custom={3}
+              src={star.src}
+              alt="star"
+              className="absolute top-0 left-10"
+            />
+            <motion.img
+              variants={fadeInAnimation}
+              custom={2}
+              src={fadeStar.src}
+              alt="star"
+              className="absolute left-[60%] top-[50px]"
+            />
+          </motion.div>
+        </div>
+
         <motion.div
           variants={heroBanner}
           initial="initial"
@@ -113,7 +115,7 @@ const Hero = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              className="text-xl leading-8 mt-2"
+              className="text-xl leading-8 mt-2 font-montserrat"
               variants={letterAnimation}
             >
               Participate in getlinked tech Hackathon 2023 stand
@@ -137,12 +139,12 @@ const Hero = () => {
           <motion.div
             variants={fadeInAnimation}
             custom={1}
-            className="lg:absolute left-[750px] static"
+            className="lg:absolute lg:left-[650px] static top-[-20px]"
           >
             <img
               src={homehero.src}
               alt="Hero"
-              className="max-w-[667px] w-full"
+              className="max-w-[828px] w-full md:w-[45vw] 2xl:w-full"
             />
             {/* <img
             src={flare2.src}
@@ -151,8 +153,8 @@ const Hero = () => {
           /> */}
           </motion.div>
         </motion.div>
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 
