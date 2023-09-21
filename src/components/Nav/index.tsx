@@ -12,7 +12,7 @@ const Nav = () => {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [isActive, pathname]);
+  }, [pathname]);
   return (
     <nav className="border-b border-white border-opacity-20 sm:px-8 px-10">
       <section className="max-w-[1256px] mx-auto lg:pt-16 lg:pb-6 py-7 flex justify-between items-center">
@@ -54,7 +54,7 @@ const Nav = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className=" bg-[#150E28] fixed right-0 top-0 text-white lg:hidden w-full rounded"
+            className=" bg-[#150E28] fixed right-0 top-0 text-white lg:hidden w-full rounded z-[99] h-screen"
           >
             <div className="h-full flex flex-col justify-between ">
               <ul className="flex flex-col gap-5 py-[150px] pl-[47px]">
