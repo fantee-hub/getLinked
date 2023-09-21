@@ -9,7 +9,7 @@ import chain from "../../../public/assets/icons/chain.svg";
 import bang from "../../../public/assets/icons/bang.svg";
 import idea from "../../../public/assets/icons/Creative 1.svg";
 import { motion } from "framer-motion";
-import { heroBanner, letterAnimation } from "@/src/utils";
+import { heroBanner, letterAnimation, fadeInAnimation } from "@/src/utils";
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
@@ -54,26 +54,36 @@ const Hero = () => {
       </div>
 
       <div>
-        <img
-          src={flare.src}
-          alt="flare"
-          className="absolute top-[-250px] left-[-50px] opacity-30 -z-30"
-        />
-        <img src={star.src} alt="star" className="absolute top-0 left-10" />
-        <img
-          src={fadeStar.src}
-          alt="star"
-          className="absolute left-[60%] top-[50px]"
-        />
+        <motion.div variants={heroBanner} initial="initial" animate="animate">
+          <img
+            src={flare.src}
+            alt="flare"
+            className="absolute top-[-250px] left-[-50px] opacity-30 -z-30"
+          />
+          <motion.img
+            variants={fadeInAnimation}
+            custom={3}
+            src={star.src}
+            alt="star"
+            className="absolute top-0 left-10"
+          />
+          <motion.img
+            variants={fadeInAnimation}
+            custom={2}
+            src={fadeStar.src}
+            alt="star"
+            className="absolute left-[60%] top-[50px]"
+          />
+        </motion.div>
       </div>
       {isTyping && (
-        <div className="mt-10 flex items-center justify-between lg:flex-row flex-col">
-          <motion.div
-            variants={heroBanner}
-            initial="initial"
-            animate="animate"
-            className="overflow-hidden"
-          >
+        <motion.div
+          variants={heroBanner}
+          initial="initial"
+          animate="animate"
+          className="mt-10 flex items-center justify-between lg:flex-row flex-col"
+        >
+          <motion.div className="overflow-hidden">
             <motion.div className="text-[80px] font-bold font-tt-clashDisplay leading-none flex flex-col gap-1 overflow-hidden pt-[70px]">
               <motion.div variants={letterAnimation} className="relative">
                 <motion.div>getlinked Tech</motion.div>
@@ -103,7 +113,7 @@ const Hero = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              className="text-xl leading-8 mt-2 overflow-hidden"
+              className="text-xl leading-8 mt-2"
               variants={letterAnimation}
             >
               Participate in getlinked tech Hackathon 2023 stand
@@ -116,13 +126,19 @@ const Hero = () => {
               Register
             </motion.div>
             <div className="mt-[77px]">00 00 00</div>
-            <img
+            <motion.img
+              variants={fadeInAnimation}
+              custom={0}
               src={fadeStar.src}
               alt="star"
               className="absolute left-[70%] bottom-[50px]"
             />
           </motion.div>
-          <div className="lg:absolute left-[750px] static">
+          <motion.div
+            variants={fadeInAnimation}
+            custom={1}
+            className="lg:absolute left-[750px] static"
+          >
             <img
               src={homehero.src}
               alt="Hero"
@@ -133,8 +149,8 @@ const Hero = () => {
             alt="flare"
             className="absolute right-[-40px] top-[-30px] opacity-50 w-full -z-40"
           /> */}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );

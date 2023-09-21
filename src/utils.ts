@@ -45,3 +45,16 @@ export const letterAnimation = {
     },
   },
 };
+
+export const fadeInAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+
+    transition: {
+      delay: 0.5 * index,
+    },
+  }),
+};
