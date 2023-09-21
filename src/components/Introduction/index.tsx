@@ -28,7 +28,7 @@ const Introduction = () => {
             <br />
             <span className="text-[#D434FE]">tech Hackathon 1.0</span>
           </div>
-          <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4">
+          <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4 text-sm">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you&apos;re a
             coding genius, a design maverick, or a concept wizard, you&apos;ll

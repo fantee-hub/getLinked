@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import homehero from "../../../public/assets/images/home-hero.png";
-import flare from "../../../public/assets/images/flare.png";
+import flare from "../../../public/assets/images/Purple-Lens-Flare-PNG.png";
 import flare2 from "../../../public/assets/images/flare-2.png";
 import star from "../../../public/assets/icons/star.svg";
 import fadeStar from "../../../public/assets/icons/star-faded.svg";
@@ -34,7 +34,7 @@ const Hero = () => {
       <img
         src={flare.src}
         alt="flare"
-        className="absolute top-[-250px] left-[-50px] opacity-30 -z-30"
+        className="absolute top-[-250px] left-[-50px] opacity-40 -z-30"
       />
 
       <div className="max-w-[1400px] mx-auto px-10 overflow-hidden">
