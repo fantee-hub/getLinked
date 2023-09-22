@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",

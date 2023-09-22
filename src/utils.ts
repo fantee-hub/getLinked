@@ -84,3 +84,42 @@ export const keyAttributes = [
     desc: "Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.",
   },
 ];
+
+export const faqContents = [
+  {
+    id: crypto.randomUUID(),
+    title: "Can I work on a project I started before the hackathon?",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "What happens if I need help during the hackathon?",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "What happens if I don't have an idea for a project?",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Can I join a team or do I have to come with one?",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "What happens after the hackathon ends",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Can I work on a project I started before the hackathon?",
+    answer:
+      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
+  },
+];

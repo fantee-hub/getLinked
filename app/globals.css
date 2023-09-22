@@ -15,6 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
 
 @layer base {
   * {
@@ -31,7 +34,7 @@
       background-image 0.4s, transform 0.4s;
   }
   body {
-    @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto;
+    @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto font-montserrat;
   }
   ul {
     @apply list-none;
@@ -40,6 +43,31 @@
     stroke-dasharray: 340;
     stroke-dashoffset: 40;
     animation: dash 0.5s linear;
+  }
+  .plus {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .plus::before,
+  .plus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: #d434fe;
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+  .plus::after {
+    transform: rotate(90deg);
+  }
+  .plus.checked::after {
+    transform: rotate(180deg);
   }
   @keyframes dash {
     from {
