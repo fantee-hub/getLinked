@@ -123,3 +123,42 @@ export const faqContents = [
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel accusantium doloribus, harum soluta totam esse unde, magni ut libero hic nulla temporibus atque deserunt magnam omnis exercitationem? Animi, sint.",
   },
 ];
+
+export const timeLine = [
+  {
+    id: crypto.randomUUID(),
+    date: "November 18, 2023",
+    title: "Hackathon Announcement",
+    desc: "The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Teams Registration begins",
+    date: "November 18, 2023",
+    desc: "Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Teams Registration ends",
+    date: "November 18, 2023",
+    desc: "Interested Participants are no longer Allowed to register",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Announcement of the accepted teams and ideas",
+    date: "November 18, 2023",
+    desc: "All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Getlinked Hackathon 1.0 Offically Begins",
+    date: "November 18, 2023",
+    desc: "Accepted teams can now proceed to build their ground breaking skill driven solutions",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Demo Day",
+    date: "November 18, 2023",
+    desc: "Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day",
+  },
+];
