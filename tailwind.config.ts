@@ -14,6 +14,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "prizes-bg": "url('../public/assets/images/prizes-bg.png')",
       },
       fontFamily: {
         "tt-clashDisplay": ["var(--font-tt-clashDisplay)", "sans-serif"],

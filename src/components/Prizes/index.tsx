@@ -5,6 +5,7 @@ import { prizes } from "@/src/utils";
 const Prizes = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
+      {/* <div className="bg-prizes-bg bg-no-repeat bg-cover w-full h-full absolute left-0 right-0 top-0 -z-20 opacity-10"></div> */}
       <div className="flex items-center justify-center gap-[37px]">
         <div>
           <img src={illustration.src} alt="illustration" />
