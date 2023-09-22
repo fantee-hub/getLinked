@@ -162,3 +162,24 @@ export const timeLine = [
     desc: "Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day",
   },
 ];
+
+export const prizes = [
+  {
+    id: crypto.randomUUID(),
+    title: "2nd",
+    prize: "300,000",
+    img: "/assets/images/silver-medal.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "1st",
+    prize: "400,000",
+    img: "/assets/images/gold-medal.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "3rd",
+    prize: "150,000",
+    img: "/assets/images/broze-medal.png",
+  },
+];

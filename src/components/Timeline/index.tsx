@@ -3,7 +3,7 @@ import { timeLine } from "@/src/utils";
 
 const Timeline = () => {
   return (
-    <section className="px-10 border-b border-white border-opacity-20 relative py-[70px] max-w-[1233px] mx-auto ">
+    <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
       <div className="text-center">
         <div className="font-tt-clashDisplay text-[32px] font-bold">
           Timeline
