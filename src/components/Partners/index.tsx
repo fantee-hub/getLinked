@@ -14,23 +14,27 @@ const Partners = () => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="grid grid-cols-3 grid-rows-2 justify-items-center items-center bg-white bg-opacity-0 rounded border border-fuchsia-500 p-[100px] max-w-[1225px] mx-auto my-[65px]">
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative line-right line-bottom">
-            <img src="/assets/partners/liberty company.png" alt="partners" />
+        <div className="grid grid-cols-3 grid-rows-2 justify-items-center items-center bg-white bg-opacity-0 rounded border border-fuchsia-500 lg:p-[100px] p-5 lg:max-w-[1225px] mx-auto my-[65px] max-w-full">
+          <div className="h-full w-full lg:max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative line-right line-bottom">
+            <img
+              src="/assets/partners/liberty company.png"
+              alt="partners"
+              className="w-full"
+            />
           </div>
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative line-right line-bottom">
+          <div className="h-full w-full lg:max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative line-right line-bottom">
             <img src="/assets/partners/liberty-pay.png" alt="parnters" />
           </div>
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative line-bottom">
+          <div className="h-full w-full lg:max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative line-bottom">
             <img src="/assets/partners/Winwise.png" alt="partners" />
           </div>
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative line-right">
+          <div className="h-full w-full max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative line-right">
             <img src="/assets/partners/wisper.png" alt="partners" />
           </div>
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative line-right ">
+          <div className="h-full w-full max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative line-right ">
             <img src="/assets/partners/Paybox.png" alt="partners" />
           </div>
-          <div className="h-full w-full max-w-[30rem] flex justify-center items-center p-10 relative ">
+          <div className="h-full w-full max-w-[30rem] flex justify-center items-center lg:p-10 p-4 relative ">
             <img src="/assets/partners/Vizual Plus.png" alt="partners" />
           </div>
         </div>

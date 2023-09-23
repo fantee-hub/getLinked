@@ -10,7 +10,7 @@ const Prizes = () => {
         <br />
         <span className="text-[#D434FE]">Rewards</span>
       </div>
-      <div className="pt-3  max-w-[25rem] mx-auto text-xs">
+      <div className="pt-3  max-w-[25rem] mx-auto text-xs text-center pb-10">
         Highlight of the prizes or rewards for winners and for participants.
       </div>
       {/* <div className="bg-prizes-bg bg-no-repeat bg-cover w-full h-full absolute left-0 right-0 top-0 -z-20 opacity-10"></div> */}
@@ -30,7 +30,7 @@ const Prizes = () => {
               participants.
             </div>
           </div>
-          <div className="flex items-center justify-center lg:gap-[30px] gap-4 relative lg:mt-[200px] mt-[150px]">
+          <div className="flex items-center justify-center lg:gap-[30px] gap-4 relative lg:mt-[200px] mt-[100px]">
             {prizes.map((prize) => (
               <div
                 key={prize.id}
