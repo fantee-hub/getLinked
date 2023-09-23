@@ -20,7 +20,7 @@ const Privacy = () => {
             <br />
             it’s our aim to always take of our participant
           </div>
-          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white text-sm font-normal leading-loose pl-[72px] pr-[39px] py-[59px]">
+          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white text-sm font-normal leading-loose px-[72px] py-[59px]">
             <div className="max-w-[425px]">
               At getlinked tech Hackathon 1.0, we value your privacy
               <br />

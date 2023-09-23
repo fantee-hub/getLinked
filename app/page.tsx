@@ -1,5 +1,6 @@
 import Criteria from "@/src/components/Criteria";
 import Faq from "@/src/components/Faq";
+import Footer from "@/src/components/Footer.tsx";
 import Hero from "@/src/components/Hero";
 import Introduction from "@/src/components/Introduction";
 import Privacy from "@/src/components/Privacy";
@@ -18,6 +19,7 @@ export default function Home() {
       <Timeline />
       <Prizes />
       <Privacy />
+      <Footer />
     </main>
   );
 }
