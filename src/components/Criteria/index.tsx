@@ -16,7 +16,7 @@ const Criteria = () => {
       <div className="absolute bottom-[-400px] right-0 opacity-40 -z-30">
         <img src={flare2.src} alt="star" />
       </div>
-      <div className="flex items-center justify-center gap-[53px]">
+      <div className="flex items-center justify-center gap-[53px] flex-col lg:flex-row">
         <div className=" relative">
           <div className="absolute top-[-78px] left-[150px]">
             <img src={star2.src} alt="star" />
@@ -29,7 +29,7 @@ const Criteria = () => {
             <img src={fadeStar.src} alt="star" />
           </div>
         </div>
-        <div>
+        <div className="text-center lg:text-left">
           <div className="font-tt-clashDisplay text-[32px] font-bold">
             Judging Criteria
             <br />
@@ -45,8 +45,10 @@ const Criteria = () => {
               </div>
             </div>
           ))}
-          <div className="w-[172px] h-[53px] bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded text-white flex items-center justify-center mt-[55px] cursor-pointer hover:bg-gradient-to-r duration-150">
-            Read More
+          <div className="flex justify-center lg:justify-start">
+            <div className="w-[172px] h-[53px] bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded text-white flex items-center justify-center mt-[55px] cursor-pointer hover:bg-gradient-to-r duration-150">
+              Read More
+            </div>
           </div>
         </div>
       </div>
