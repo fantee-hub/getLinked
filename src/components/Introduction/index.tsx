@@ -7,11 +7,11 @@ import arrow from "../../../public/assets/icons/arrow.svg";
 const Introduction = () => {
   return (
     <section className="pt-[56px] pb-[84px] px-10 border-b border-white border-opacity-20">
-      <div className="flex items-center justify-center gap-[106px]">
+      <div className="flex items-center justify-center gap-[106px] lg:flex-row flex-col">
         <div className="relative">
           <img src={idea.src} alt="idea" />
 
-          <div className="absolute top-[190px] -left-14">
+          <div className="absolute top-[190px] lg:-left-14 left-0">
             <img src={star.src} alt="star" />
           </div>
           <div>
@@ -22,7 +22,7 @@ const Introduction = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="text-center lg:text-left">
           <div className="font-bold text-[32px] font-tt-clashDisplay relative">
             Introduction to getlinked
             <br />
