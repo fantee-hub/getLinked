@@ -12,10 +12,10 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 const Footer = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative pt-[70px] bg-[#100B20]">
-      <div className="flex justify-center gap-[190px]">
+      <div className="flex justify-center lg:gap-[190px] gap-8 flex-col lg:flex-row">
         <div className="flex flex-col justify-between items-stretch">
           <div className="flex-1">
-            <div className="font-tt-clashDisplay font-bold text-3xl">
+            <div className="font-tt-clashDisplay font-bold lg:text-3xl text-xl">
               get<span className="text-fuchsia-500">linked</span>
             </div>
             <div className="text-xs leading-7">
