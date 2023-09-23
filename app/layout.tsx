@@ -1,7 +1,7 @@
 import Nav from "@/src/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Unica_One } from "next/font/google";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, createTheme } from "@mui/material";
@@ -12,6 +12,13 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",
+});
+
+const unicaOne = Unica_One({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-unica",
 });
 
 const clashDisplay = localFont({
@@ -52,7 +59,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${clashDisplay.variable} ${montserrat.variable}`}>
+      <body
+        className={`${clashDisplay.variable} ${montserrat.variable} ${unicaOne.variable}`}
+      >
         <Nav />
         <Toaster />
         {children}

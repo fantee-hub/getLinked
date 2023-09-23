@@ -15,6 +15,7 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<number>(150000);
   const words = "Igniting a Revolution in HR Innovation";
 
   useEffect(() => {
@@ -28,6 +29,26 @@ const Hero = () => {
     }
     setIsTyping(true);
   }, [currentIndex]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (timeLeft > 0) {
+        setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timeLeft]);
+
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+
+  const formattedTime = `${String(hours).padStart(2, "0")}h ${String(
+    minutes
+  ).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
 
   return (
     <section className="relative border-b border-white border-opacity-20 ">
@@ -140,8 +161,27 @@ const Hero = () => {
                 Register
               </motion.div>
             </div>
+            <div className="mt-[77px] mb-10 flex gap-5 justify-center lg:justify-start">
+              <div>
+                <span className=" text-[48px] lg:text-[64px] leading-[63px] font-unica">
+                  {`${String(hours).padStart(2, "0")}`}
+                </span>
+                <span>H</span>
+              </div>
+              <div>
+                <span className=" text-[48px] lg:text-[64px] leading-[63px] font-unica">
+                  {`${String(minutes).padStart(2, "0")}`}
+                </span>
+                <span>M</span>
+              </div>
+              <div>
+                <span className=" text-[48px] lg:text-[64px] leading-[63px] font-unica">
+                  {`${String(seconds).padStart(2, "0")}`}
+                </span>
+                <span>S</span>
+              </div>
+            </div>
 
-            <div className="mt-[77px]">00 00 00</div>
             <motion.img
               variants={fadeInAnimation}
               custom={0}

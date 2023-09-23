@@ -19,6 +19,7 @@ const config: Config = {
       fontFamily: {
         "tt-clashDisplay": ["var(--font-tt-clashDisplay)", "sans-serif"],
         montserrat: ["var(--font-montserrat)"],
+        unica: ["var(--font-unica)"],
       },
     },
   },
