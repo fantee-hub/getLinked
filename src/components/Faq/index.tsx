@@ -17,12 +17,12 @@ const Faq = () => {
           <div className="absolute top-[-50px] lg:left-[-50px] left-0">
             <img src={star2.src} alt="star" />
           </div>
-          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold">
+          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold lg:leading-10">
             Frequently Ask
             <br />
             <span className="text-[#D434FE]"> Question</span>
           </div>
-          <div className="pt-4 lg:text-base text-xs leading-7">
+          <div className="pt-4 lg:text-base text-xs lg:leading-7">
             We got answers to the questions that you might
             <br />
             want to ask about getlinked Hackathon 1.0

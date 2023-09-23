@@ -30,14 +30,14 @@ const Criteria = () => {
           </div>
         </div>
         <div className="text-center lg:text-left">
-          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold">
+          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold lg:leading-10">
             Judging Criteria
             <br />
             <span className="text-[#D434FE]">Key attributes</span>
           </div>
           {keyAttributes.map((attr) => (
             <div key={attr.id}>
-              <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4 lg:text-sm text-xs">
+              <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 lg:text-sm text-xs">
                 <span className="text-base font-bold text-[#FF26B9]">
                   {attr.title}
                 </span>

@@ -23,12 +23,12 @@ const Introduction = () => {
           </div>
         </div>
         <div className="text-center lg:text-left">
-          <div className="font-bold lg:text-[32px] text-xl font-tt-clashDisplay relative">
+          <div className="font-bold lg:text-[32px] text-xl font-tt-clashDisplay relative lg:leading-10">
             Introduction to getlinked
             <br />
             <span className="text-[#D434FE]">tech Hackathon 1.0</span>
           </div>
-          <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4 lg:text-sm text-xs">
+          <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 lg:text-sm text-xs">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you&apos;re a
             coding genius, a design maverick, or a concept wizard, you&apos;ll
