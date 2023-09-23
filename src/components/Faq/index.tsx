@@ -14,20 +14,20 @@ const Faq = () => {
     <section className="px-10 border-b border-white border-opacity-20 relative py-[60px]">
       <div className="flex justify-center items-center gap-7 flex-col lg:flex-row">
         <div className="relative text-center lg:text-left">
-          <div className="absolute top-[-50px] left-[-50px]">
+          <div className="absolute top-[-50px] lg:left-[-50px] left-0">
             <img src={star2.src} alt="star" />
           </div>
-          <div className="font-tt-clashDisplay text-[32px] font-bold">
+          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold">
             Frequently Ask
             <br />
             <span className="text-[#D434FE]"> Question</span>
           </div>
-          <div className="pt-4">
+          <div className="pt-4 lg:text-base text-xs leading-7">
             We got answers to the questions that you might
             <br />
             want to ask about getlinked Hackathon 1.0
           </div>
-          <div className="flex flex-col gap-6 mt-[68px] max-w-[427px] mx-auto text-sm">
+          <div className="flex flex-col gap-6 mt-[68px] max-w-[427px] mx-auto lg:text-sm text-left text-xs">
             {faqContents.map((faqs, index) => (
               <Accordion
                 key={faqs.id}

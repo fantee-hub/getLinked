@@ -15,7 +15,7 @@ const Accordion = ({ children, num, setOpen, curOpen, title }: any) => {
           !isOpen ? "accordion-item" : ""
         } `}
       >
-        <div className="text-sm">{title}</div>
+        <div className="lg:text-sm text-xs">{title}</div>
         <div className="toggle-sign">
           <div className={`plus ${isOpen ? "checked" : ""}`}></div>
         </div>
