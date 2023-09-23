@@ -38,9 +38,9 @@ const Hero = () => {
       />
 
       <div className="max-w-[1400px] mx-auto px-10 overflow-hidden">
-        <div className="font-bold text-[36px] italic text-right  relative pt-8">
+        <div className="font-bold lg:text-[36px] text-base italic text-right  relative pt-8">
           {currentText}
-          <div className="absolute bottom-[-16px] right-10">
+          <div className="absolute bottom-[-20px] right-10">
             {isTyping && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const Hero = () => {
                 height="17"
                 viewBox="0 0 255 17"
                 fill="none"
-                className="animated-line"
+                className="animated-line w-[115px] lg:w-auto"
               >
                 <path
                   d="M1 14.043C43.3333 5.7097 154.4 -5.95697 254 14.043"
@@ -85,9 +85,12 @@ const Hero = () => {
           animate="animate"
           className="mt-10 flex items-center justify-between lg:flex-row flex-col"
         >
-          <motion.div className="overflow-hidden">
-            <motion.div className="text-[80px] font-bold font-tt-clashDisplay leading-none flex flex-col gap-1 overflow-hidden pt-[70px]">
-              <motion.div variants={letterAnimation} className="relative">
+          <motion.div className="overflow-hidden text-center lg:text-left">
+            <motion.div className="lg:text-[80px] text-[32px] font-bold font-tt-clashDisplay leading-none flex flex-col gap-1 overflow-hidden pt-[70px]">
+              <motion.div
+                variants={letterAnimation}
+                className="relative pt-10 lg:pt-0"
+              >
                 <motion.div>getlinked Tech</motion.div>
                 <div>
                   <img
@@ -106,27 +109,38 @@ const Hero = () => {
                 </motion.div>
                 <div className="flex items-center ">
                   <span>
-                    <img src={chain.src} alt="chain" />
+                    <img
+                      src={chain.src}
+                      alt="chain"
+                      className="w-8 h-8 lg:w-auto lg:h-auto"
+                    />
                   </span>
                   <span>
-                    <img src={bang.src} alt="bang" />
+                    <img
+                      src={bang.src}
+                      alt="bang"
+                      className="w-8 h-8 lg:w-auto lg:h-auto"
+                    />
                   </span>
                 </div>
               </motion.div>
             </motion.div>
             <motion.div
-              className="text-xl leading-8 mt-2 font-montserrat"
+              className="lg:text-xl text-xs leading-8 mt-2 font-montserrat"
               variants={letterAnimation}
             >
               Participate in getlinked tech Hackathon 2023 stand
               <br /> a chance to win a Big prize
             </motion.div>
-            <motion.div
-              variants={letterAnimation}
-              className="mt-[41px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r"
-            >
-              Register
-            </motion.div>
+            <div className="flex justify-center lg:justify-start">
+              <motion.div
+                variants={letterAnimation}
+                className="mt-[41px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r"
+              >
+                Register
+              </motion.div>
+            </div>
+
             <div className="mt-[77px]">00 00 00</div>
             <motion.img
               variants={fadeInAnimation}

@@ -39,7 +39,7 @@ const ContactPage = () => {
       }
     } catch (e: any) {
       setIsLoading(false);
-      toast.error("Make sure all inputs are typed in correctly");
+      toast.error(e.message);
       console.log(e);
     }
   };

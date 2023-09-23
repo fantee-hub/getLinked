@@ -1,27 +1,94 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import illustration from "../../../public/assets/images/illustration-6.png";
 import walk from "../../../public/assets/images/walk.svg";
 import InputSelect from "../InputSelect";
 import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
+import CircularProgress from "@mui/material/CircularProgress";
+import { categoryList } from "@/src/api";
+import toast from "react-hot-toast";
+import { register } from "@/src/api";
 
 const RegisterSection = () => {
-  const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState("");
+  const [values, setValues] = useState({});
+  const [checked, setChecked] = React.useState(false);
+  const [categoryData, setCateGoryData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const [size, setSize] = useState("");
 
-  const categoryOption = [
-    { value: "mobile", label: "Mobile" },
-    { value: "web", label: "Web" },
-    { value: "ui/ux", label: "UI/UX" },
-  ];
+  const opt = categoryData.map((item: any) => {
+    return { value: item.id, label: item.name };
+  });
+
   const groupSize = [
     { value: "10", label: "10" },
     { value: "20", label: "20" },
     { value: "30", label: "30" },
   ];
-  console.log(category);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    if (Object.keys(values).length == 0) {
+      return toast.error("make sure all input fields are not empty");
+    }
+    //@ts-ignore
+    const { team_name, email, phone, topic } = values;
+    const inputData = {
+      email,
+      phone_number: phone,
+      team_name,
+      //@ts-ignore
+      group_size: Number(size.value),
+      project_topic: topic,
+      privacy_poclicy_accepted: checked,
+      //@ts-ignore
+      category: Number(categories.value),
+    };
+    try {
+      const data = await register(inputData);
+      if (data) {
+        setIsLoading(false);
+        toast.success("Registered Successfully");
+        e.target.reset();
+        setIsLoading(false);
+      }
+    } catch (e: any) {
+      setIsLoading(false);
+      toast.error(e.message);
+    }
+    console.log(inputData);
+  };
+  const handleInputChange = (e: any) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
+
+  const fetchCategory = async () => {
+    try {
+      const { data } = await categoryList();
+      if (data) {
+        //@ts-ignore
+        // setCategory({ value: data.name, label: data.name });
+        setCateGoryData(data);
+      }
+    } catch (e: any) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    fetchCategory();
+  }, []);
+  console.log(opt);
+
   return (
     <section className="py-[70px] relative px-10 overflow-hidden">
       <div className="flex justify-center items-center">
@@ -41,7 +108,7 @@ const RegisterSection = () => {
 
           <div className="text-2xl">CREATE YOUR ACCOUNT</div>
 
-          <form className="pt-8 w-full text-sm">
+          <form className="pt-8 w-full text-sm" onSubmit={handleSubmit}>
             <div className="flex gap-8 mb-5">
               <div className="flex flex-col gap-1">
                 <label htmlFor="team_name">Team’s Name</label>
@@ -51,6 +118,7 @@ const RegisterSection = () => {
                   id="team_name"
                   className="w-64 h-12  bg-white bg-opacity-5 rounded shadow border border-white outline-none py-4 px-5"
                   placeholder="Enter the name of your group"
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -61,6 +129,7 @@ const RegisterSection = () => {
                   id="phone"
                   className="w-64 h-12  bg-white bg-opacity-5 rounded shadow border border-white outline-none py-4 px-7"
                   placeholder="Enter your phone number"
+                  onChange={handleInputChange}
                 />
               </div>
             </div>
@@ -74,6 +143,7 @@ const RegisterSection = () => {
                   id="email"
                   className="w-64 h-12  bg-white bg-opacity-5 rounded shadow border border-white outline-none py-4 px-7"
                   placeholder="Enter your email address"
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -84,6 +154,7 @@ const RegisterSection = () => {
                   id="topic"
                   className="w-64 h-12  bg-white bg-opacity-5 rounded shadow border border-white outline-none py-4 px-4"
                   placeholder="What is your group project topic"
+                  onChange={handleInputChange}
                 />
               </div>
             </div>
@@ -93,9 +164,9 @@ const RegisterSection = () => {
                 <div>Category</div>
                 <InputSelect
                   placeholder={"Select Category"}
-                  option={categoryOption}
-                  setOption={setCategory}
-                  optionValue={category}
+                  option={opt}
+                  setOption={setCategories}
+                  optionValue={categories}
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -112,6 +183,8 @@ const RegisterSection = () => {
               <div>
                 <Checkbox
                   required
+                  checked={checked}
+                  onChange={handleChange}
                   inputProps={{ "aria-label": "controlled" }}
                   sx={{
                     color: "#ffffff",
@@ -126,7 +199,17 @@ const RegisterSection = () => {
               </div>
             </div>
             <div className="mt-5">
-              <button className="w-full h-14 flex items-center justify-center bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded">
+              <button
+                className="w-full h-14 flex items-center justify-center bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded"
+                disabled={isLoading}
+              >
+                {isLoading && (
+                  <CircularProgress
+                    color="inherit"
+                    size={20}
+                    className="mr-2"
+                  />
+                )}
                 Register Now
               </button>
             </div>
