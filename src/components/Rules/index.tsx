@@ -14,11 +14,11 @@ const Rules = () => {
       </div>
       <div className="flex items-center justify-center flex-col-reverse lg:flex-row">
         <div className="text-center lg:text-left">
-          <div className="font-tt-clashDisplay text-[32px] font-bold">
+          <div className="font-tt-clashDisplay lg:text-[32px] font-bold text-xl">
             Rules and
             <br /> <span className="text-[#D434FE]">Guidelines</span>
           </div>
-          <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4 text-sm">
+          <div className="max-w-[535px] mx-auto font-montserrat leading-7 mt-4 lg:text-sm text-xs">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you&apos;re a
             coding genius, a design maverick, or a concept wizard, you&apos;ll
