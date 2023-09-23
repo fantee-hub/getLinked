@@ -183,3 +183,30 @@ export const prizes = [
     img: "/assets/images/broze-medal.png",
   },
 ];
+
+export const partnersImages = [
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/liberty company.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/liberty-pay.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/Winwise.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/wisper.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/Paybox.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    img: "/assets/partners/Vizual Plus.png",
+  },
+];

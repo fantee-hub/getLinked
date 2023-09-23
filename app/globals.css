@@ -33,6 +33,10 @@
     transition: color 0.4s, background-color 0.4s, left 0.4s, opacity 0.4s,
       background-image 0.4s, transform 0.4s;
   }
+  *:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   body {
     @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto font-montserrat;
   }

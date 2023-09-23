@@ -3,6 +3,7 @@ import Faq from "@/src/components/Faq";
 import Footer from "@/src/components/Footer.tsx";
 import Hero from "@/src/components/Hero";
 import Introduction from "@/src/components/Introduction";
+import Partners from "@/src/components/Partners";
 import Privacy from "@/src/components/Privacy";
 import Prizes from "@/src/components/Prizes";
 import Rules from "@/src/components/Rules";
@@ -18,6 +19,7 @@ export default function Home() {
       <Faq />
       <Timeline />
       <Prizes />
+      <Partners />
       <Privacy />
       <Footer />
     </main>

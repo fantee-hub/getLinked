@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({
@@ -52,6 +53,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${clashDisplay.variable} ${montserrat.variable}`}>
         <Nav />
+        <Toaster />
         {children}
       </body>
     </html>
