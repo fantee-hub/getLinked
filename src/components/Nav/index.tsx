@@ -53,10 +53,11 @@ const Nav = () => {
               Contact
             </li>
           </Link>
-
-          <li className="ml-[65px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center register">
-            Register
-          </li>
+          <Link href="/register">
+            <li className="ml-[65px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center register">
+              Register
+            </li>
+          </Link>
         </ul>
         <div
           className={` lg:hidden flex flex-col gap-2 z-[999] ${

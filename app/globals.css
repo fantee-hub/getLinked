@@ -37,6 +37,41 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+  .logo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    max-width: 32.1rem;
+    padding: 4rem;
+    width: 100%;
+  }
+  .line-bottom::after {
+    content: "";
+    position: absolute;
+    background-color: #d434fe;
+    bottom: 0;
+    height: 4px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    width: 80%;
+  }
+  .line-right::before {
+    content: "";
+    position: absolute;
+    background-color: #d434fe;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 4px;
+  }
+  .Select-value-label {
+    background-color: white;
+    color: #fff;
+  }
   body {
     @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto font-montserrat;
   }

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({

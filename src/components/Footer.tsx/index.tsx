@@ -12,7 +12,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 const Footer = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative pt-[70px] bg-[#100B20]">
-      <div className="flex justify-center gap-[100px]">
+      <div className="flex justify-center gap-[190px]">
         <div className="flex flex-col justify-between items-stretch">
           <div className="flex-1">
             <div className="font-tt-clashDisplay font-bold text-3xl">
@@ -35,10 +35,10 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="text-fuchsia-500 text-sm pb-2 font-semibold">
+          <div className="text-fuchsia-500 text-sm pb-3 font-semibold">
             Useful Links
           </div>
-          <ul className="flex flex-col gap-4 text-xs">
+          <ul className="flex flex-col gap-5 text-xs">
             <li>Overview</li>
             <li>Timeline</li>
             <li>FAQs</li>
@@ -61,10 +61,10 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <div className="text-fuchsia-500 text-sm pb-2 font-semibold">
+          <div className="text-fuchsia-500 text-sm pb-3 font-semibold">
             Contact Us
           </div>
-          <ul className="flex flex-col gap-4 text-xs">
+          <ul className="flex flex-col gap-5 text-xs">
             <li className="flex items-center gap-4">
               <span className="text-xl ">
                 <BiSolidPhoneCall />

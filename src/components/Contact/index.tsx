@@ -10,7 +10,7 @@ import flare1 from "../../../public/assets/images/contact-flare.png";
 import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG-4.png";
 import toast from "react-hot-toast";
 import { submitContactForm } from "@/src/api";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const ContactPage = () => {
   const [values, setValues] = useState({});
