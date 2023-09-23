@@ -6,25 +6,36 @@ import hamburger from "../../../public/assets/icons/hamburger.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import Curve from "../Nav/Curve";
 import close from "../../../public/assets/icons/close.svg";
-import { Link, animateScroll as scroll } from "react-scroll";
+import * as Scroll from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 const Nav = () => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
+  const scrollToTop = function () {
+    scroll.scrollToTop();
+  };
 
+  const LinkToComponent = Scroll.Link;
   useEffect(() => {
     if (isActive) setIsActive(false);
   }, [pathname]);
   return (
     <nav className="border-b border-white border-opacity-20 sm:px-8 px-10">
       <section className="max-w-[1256px] mx-auto lg:pt-16 lg:pb-6 py-7 flex justify-between items-center">
-        <div className="font-tt-clashDisplay flex font-bold lg:text-[36px] text-[15px]">
-          <span>get</span>
-          <span className="text-[#D434FE]">Linked</span>
-        </div>
+        <Link href="/">
+          <div
+            className="font-tt-clashDisplay flex font-bold lg:text-[36px] text-[15px]"
+            onClick={scrollToTop}
+          >
+            <span>get</span>
+            <span className="text-[#D434FE]">Linked</span>
+          </div>
+        </Link>
 
         <ul className="font-montserrat gap-14 items-center lg:flex hidden">
-          <Link
+          <LinkToComponent
             activeClass="active"
             to="timeline"
             spy={true}
@@ -32,12 +43,17 @@ const Nav = () => {
             offset={0}
             duration={500}
           >
-            <li className="cursor-pointer nav-active">Timeline</li>
-          </Link>
+            <li className="cursor-pointer hover:nav-active">Timeline</li>
+          </LinkToComponent>
 
           <li>Overview</li>
           <li>FAQs</li>
-          <li>Contact</li>
+          <Link href="/contact">
+            <li className={`${pathname === "/contact" ? "nav-active" : ""}`}>
+              Contact
+            </li>
+          </Link>
+
           <li className="ml-[65px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center register">
             Register
           </li>

@@ -74,12 +74,20 @@
   .plus.checked::after {
     transform: rotate(180deg);
   }
-  .nav-active:hover {
+  .nav-active {
     background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all ease 0.5s;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
   }
 
   @keyframes dash {
