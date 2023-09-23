@@ -4,10 +4,10 @@ const Partners = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 py-[78px]">
       <div className="text-center flex flex-col gap-5">
-        <div className="text-[32px] font-bold font-tt-clashDisplay leading-7">
+        <div className="lg:text-[32px] text-xl font-bold font-tt-clashDisplay lg:leading-7 leading-7">
           Partners and Sponsors
         </div>
-        <div className="text-sm leading-7">
+        <div className="lg:text-sm lg:leading-7 text-xs leading-7">
           Getlinked Hackathon 1.0 is honored to have the following major
           <br />
           companies as its partners and sponsors

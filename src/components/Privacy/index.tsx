@@ -15,12 +15,12 @@ const Privacy = () => {
           <div className="text-white opacity-75 lg:text-sm text-xs lg:leading-7">
             Last updated on September 12, 2023
           </div>
-          <div className="text-white lg:text-sm text-xs lg:leading-relaxed mt-[30px]">
+          <div className="text-white lg:text-sm text-xs lg:leading-relaxed leading-relaxed mt-[30px]">
             Below are our privacy & policy, which outline a lot of goodies.{" "}
             <br />
             it’s our aim to always take of our participant
           </div>
-          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white lg:text-sm font-normal lg:leading-loose lg:px-[72px] px-4 py-[45px] lg:py-[59px] text-center lg:text-left text-xs">
+          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white lg:text-sm font-normal lg:leading-loose leading-loose lg:px-[72px] px-4 py-[45px] lg:py-[59px] text-center lg:text-left text-xs">
             <div className="max-w-[425px]">
               At getlinked tech Hackathon 1.0, we value your privacy
               <br />
@@ -60,8 +60,8 @@ const Privacy = () => {
                   sites, for your project developement
                 </div>
               </div>
-              <div className="flex justify-center mt-[19px]">
-                <div className="w-[172px] h-[53px] bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded text-white flex items-center justify-center cursor-pointer hover:bg-gradient-to-r duration-150">
+              <div className="flex justify-center lg:justify-start">
+                <div className="lg:w-[172px] lg:h-[53px] w-24 h-8 lg:text-base text-xs bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 rounded text-white flex items-center justify-center lg:mt-[55px] mt-7 cursor-pointer hover:bg-gradient-to-r duration-150">
                   Read More
                 </div>
               </div>

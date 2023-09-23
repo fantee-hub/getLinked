@@ -37,7 +37,7 @@ const Criteria = () => {
           </div>
           {keyAttributes.map((attr) => (
             <div key={attr.id}>
-              <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 lg:text-sm text-xs">
+              <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 leading-7 mt-4 lg:text-sm text-xs">
                 <span className="text-base font-bold text-[#FF26B9]">
                   {attr.title}
                 </span>

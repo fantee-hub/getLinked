@@ -18,7 +18,7 @@ const Rules = () => {
             Rules and
             <br /> <span className="text-[#D434FE]">Guidelines</span>
           </div>
-          <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 lg:text-sm text-xs">
+          <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 leading-7 lg:text-sm text-xs">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you&apos;re a
             coding genius, a design maverick, or a concept wizard, you&apos;ll
