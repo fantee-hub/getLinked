@@ -6,16 +6,16 @@ const Privacy = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
       <div className="flex items-center justify-center gap-[50px] flex-col lg:flex-row">
-        <div>
-          <div className="font-tt-clashDisplay text-[32px] font-bold">
+        <div className="text-center lg:text-left">
+          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold">
             Privacy Policy and
             <br />
             <span className="text-[#D434FE]">Terms</span>
           </div>
-          <div className="text-white opacity-75 text-sm leading-7">
+          <div className="text-white opacity-75 lg:text-sm text-xs leading-7">
             Last updated on September 12, 2023
           </div>
-          <div className="text-white text-sm leading-relaxed mt-[30px]">
+          <div className="text-white lg:text-sm text-xs leading-relaxed mt-[30px]">
             Below are our privacy & policy, which outline a lot of goodies.{" "}
             <br />
             it’s our aim to always take of our participant
