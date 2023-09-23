@@ -12,8 +12,8 @@ const Faq = () => {
 
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative py-[60px]">
-      <div className="flex justify-center items-center gap-7">
-        <div className="relative">
+      <div className="flex justify-center items-center gap-7 flex-col lg:flex-row">
+        <div className="relative text-center lg:text-left">
           <div className="absolute top-[-50px] left-[-50px]">
             <img src={star2.src} alt="star" />
           </div>
@@ -41,7 +41,7 @@ const Faq = () => {
             ))}
           </div>
         </div>
-        <div className="relative">
+        <div className="relative mt-10 lg:mt-0">
           <img src={illustration.src} alt="illustration" />
           <div className="absolute bottom-[-20px] right-[150px]">
             <img src={star.src} alt="star" />
