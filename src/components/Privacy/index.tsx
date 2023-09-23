@@ -5,7 +5,7 @@ import check from "../../../public/assets/icons/check.svg";
 const Privacy = () => {
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
-      <div className="flex items-center justify-center gap-[50px]">
+      <div className="flex items-center justify-center gap-[50px] flex-col lg:flex-row">
         <div>
           <div className="font-tt-clashDisplay text-[32px] font-bold">
             Privacy Policy and
@@ -20,7 +20,7 @@ const Privacy = () => {
             <br />
             it’s our aim to always take of our participant
           </div>
-          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white text-sm font-normal leading-loose px-[72px] py-[59px]">
+          <div className=" bg-zinc-300 bg-opacity-5 rounded border border-fuchsia-500 mt-[69px] text-white lg:text-sm font-normal leading-loose lg:px-[72px] px-4 py-[45px] lg:py-[59px] text-center lg:text-left text-xs">
             <div className="max-w-[425px]">
               At getlinked tech Hackathon 1.0, we value your privacy
               <br />
