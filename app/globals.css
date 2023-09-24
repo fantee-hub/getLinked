@@ -78,6 +78,11 @@
     background-blend-mode: hard-light;
     background-repeat: no-repeat;
   }
+  @media (min-width: 1024px) {
+    .flare {
+      background: none;
+    }
+  }
   body {
     @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto font-montserrat;
   }

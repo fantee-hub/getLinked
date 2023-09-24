@@ -142,10 +142,10 @@ const ContactPage = () => {
             </svg>
           </div>
           <div className="font-tt-clashDisplay text-fuchsia-500 text-xl font-semibold lg:pb-8 pb-6 max-w-[30rem] mx-auto lg:max-w-full relative">
-            <div className="absolute left-20 top-[-50px]">
+            <div className="absolute left-20 top-[-50px] lg:hidden">
               <img src={star2.src} alt="star" className="w-5 h-5" />
             </div>
-            <div className="absolute right-0 bottom-0">
+            <div className="absolute right-0 bottom-0 lg:hidden">
               <img src={fadeStar.src} alt="star" className="w-5 h-5" />
             </div>
             <div>Questions or need assistance?</div>
