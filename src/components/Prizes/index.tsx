@@ -47,7 +47,7 @@ const Prizes = () => {
                       alt="prizes"
                       className={`${
                         prize.title === "1st"
-                          ? "lg:max-w-[288px] h-32 max-w-[128px]  lg:h-72 lg:top-[-170px] top-[-105px]"
+                          ? "lg:max-w-[288px] h-32 max-w-[128px]  lg:h-72 lg:top-[-170px] top-[-106px]"
                           : "lg:max-w-[176px] max-w-[80px] lg:h-44 h-20 "
                       } object-cover lg:top-[-150px] top-[-80px]`}
                     />
