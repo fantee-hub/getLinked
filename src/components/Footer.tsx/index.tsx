@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import {
@@ -8,8 +9,12 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import * as Scroll from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 const Footer = () => {
+  const LinkToComponent = Scroll.Link;
   return (
     <section className="px-10 border-b border-white border-opacity-20 relative pt-[70px] bg-[#100B20]">
       <div className="flex justify-center lg:gap-[190px] gap-8 flex-col lg:flex-row">
@@ -39,10 +44,40 @@ const Footer = () => {
             Useful Links
           </div>
           <ul className="flex flex-col gap-5 text-xs">
-            <li>Overview</li>
-            <li>Timeline</li>
-            <li>FAQs</li>
-            <li>Register</li>
+            <LinkToComponent
+              activeClass="active"
+              to="overview"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <li className="cursor-pointer hover:nav-active">Overview</li>
+            </LinkToComponent>
+            <LinkToComponent
+              activeClass="active"
+              to="timeline"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <li className="cursor-pointer hover:nav-active">Timeline</li>
+            </LinkToComponent>
+            <LinkToComponent
+              activeClass="active"
+              to="faq"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <li className="cursor-pointer hover:nav-active">FAQs</li>
+            </LinkToComponent>
+            <Link href="/register">
+              <li className="cursor-pointer hover:nav-active">Register</li>
+            </Link>
+
             <li className="flex items-center gap-4 text-xl">
               <span className="text-xs text-fuchsia-500">Follow us</span>
               <span className="hover:text-fuchsia-500 duration-150 cursor-pointer hover:scale-[1.2]">

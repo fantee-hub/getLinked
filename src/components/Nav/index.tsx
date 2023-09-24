@@ -45,8 +45,17 @@ const Nav = () => {
           >
             <li className="cursor-pointer hover:nav-active">Timeline</li>
           </LinkToComponent>
+          <LinkToComponent
+            activeClass="active"
+            to="overview"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <li className="cursor-pointer hover:nav-active">Overview</li>
+          </LinkToComponent>
 
-          <li>Overview</li>
           <LinkToComponent
             activeClass="active"
             to="faq"
