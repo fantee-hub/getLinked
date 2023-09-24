@@ -21,10 +21,11 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
+
     if (Object.keys(values).length == 0) {
       return toast.error("make sure all input fields are not empty");
     }
+    setIsLoading(true);
     try {
       //@ts-ignore
       const { firstName, email, phone, message } = values;
