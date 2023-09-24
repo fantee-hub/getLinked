@@ -20,7 +20,7 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
-  const [timeLeft, setTimeLeft] = useState<number>(150000);
+  const [timeLeft, setTimeLeft] = useState<number>(1500);
   const words = "Igniting a Revolution in HR Innovation";
 
   useEffect(() => {
