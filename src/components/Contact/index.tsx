@@ -107,7 +107,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="lg:bg-white lg:bg-opacity-5 flare bg-opacity-1 fixed w-full lg:w-auto h-screen top-0 bottom-0 z-[999] lg:static bg-[#140D27] rounded-xl shadow lg:pt-[75px] pt-[67px] pb-[67px] lg:px-[90px] px-10 overflow-auto lg:overflow-hidden">
+        <div className="lg:bg-white lg:bg-opacity-5 flare bg-opacity-1 fixed w-full lg:w-auto h-screen top-0 bottom-0 z-[999] lg:static bg-[#140D27] rounded-xl shadow lg:pt-[75px] py-[67px] lg:px-[90px] px-10 overflow-auto lg:overflow-hidden">
           <div className="pb-10 lg:hidden block" onClick={() => router.back()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
