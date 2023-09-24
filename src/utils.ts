@@ -57,6 +57,36 @@ export const fadeInAnimation = {
     },
   }),
 };
+
+export const elementList = {
+  initial: {
+    opacity: 1,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+export const fadeIn = {
+  initial: {
+    scale: 0.8,
+    opacity: 0,
+  },
+  animate: (index: number) => ({
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: index * 1,
+    },
+  }),
+};
+
 export const keyAttributes = [
   {
     id: crypto.randomUUID(),

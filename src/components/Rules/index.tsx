@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import illustration from "../../../public/assets/images/illustration-1.png";
 import flare1 from "../../../public/assets/images/Purple-Lens-Flare-PNG.png";
 import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG 2.png";
+import { motion } from "framer-motion";
+import { elementList, fadeIn, letterAnimation } from "@/src/utils";
 
 const Rules = () => {
   return (
@@ -12,12 +15,21 @@ const Rules = () => {
       <div className="absolute top-[200px] right-[0px] opacity-50 -z-30">
         <img src={flare2.src} alt="flare" className="w-full" />
       </div>
-      <div className="flex items-center justify-center flex-col-reverse lg:flex-row">
+      <motion.div
+        variants={elementList}
+        initial="initial"
+        whileInView="animate"
+        className="flex items-center justify-center flex-col-reverse lg:flex-row"
+      >
         <div className="text-center lg:text-left">
-          <div className="font-tt-clashDisplay lg:text-[32px] font-bold text-xl lg:leading-10">
-            Rules and
-            <br /> <span className="text-[#D434FE]">Guidelines</span>
-          </div>
+          <motion.div className="overflow-hidden font-tt-clashDisplay lg:text-[32px] font-bold text-xl lg:leading-10">
+            <motion.div variants={letterAnimation} className="">
+              Rules and
+            </motion.div>
+            <motion.div variants={letterAnimation} className="text-[#D434FE]">
+              Guidelines
+            </motion.div>
+          </motion.div>
           <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 mt-4 leading-7 lg:text-sm text-xs">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you&apos;re a
@@ -29,10 +41,10 @@ const Rules = () => {
           </div>
         </div>
 
-        <div>
+        <motion.div variants={fadeIn} custom={0}>
           <img src={illustration.src} alt="illustration" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

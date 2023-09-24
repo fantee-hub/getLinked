@@ -9,7 +9,12 @@ import chain from "../../../public/assets/icons/chain.svg";
 import bang from "../../../public/assets/icons/bang.svg";
 import idea from "../../../public/assets/icons/Creative 1.svg";
 import { motion } from "framer-motion";
-import { heroBanner, letterAnimation, fadeInAnimation } from "@/src/utils";
+import {
+  heroBanner,
+  letterAnimation,
+  fadeInAnimation,
+  fadeIn,
+} from "@/src/utils";
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
@@ -155,7 +160,7 @@ const Hero = () => {
             </motion.div>
             <div className="flex justify-center lg:justify-start">
               <motion.div
-                variants={letterAnimation}
+                variants={fadeIn}
                 className="mt-[41px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r"
               >
                 Register
