@@ -15,6 +15,7 @@ import {
   fadeInAnimation,
   fadeIn,
 } from "@/src/utils";
+import Link from "next/link";
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
@@ -159,12 +160,14 @@ const Hero = () => {
               <br /> a chance to win a Big prize
             </motion.div>
             <div className="flex justify-center lg:justify-start">
-              <motion.div
-                variants={fadeIn}
-                className="mt-[41px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r"
-              >
-                Register
-              </motion.div>
+              <Link href="/register">
+                <motion.div
+                  variants={fadeIn}
+                  className="mt-[41px] rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r"
+                >
+                  Register
+                </motion.div>
+              </Link>
             </div>
             <div className="mt-[77px] mb-10 flex gap-5 justify-center lg:justify-start">
               <div>
