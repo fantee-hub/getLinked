@@ -8,16 +8,16 @@ const Timeline = () => {
     <Element name="timeline">
       <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
         <div className="text-center">
-          <div className="font-tt-clashDisplay text-[32px] font-bold">
+          <div className="font-tt-clashDisplay lg:text-[32px text-xl font-bold">
             Timeline
           </div>
-          <div className="pt-3">
+          <div className="pt-3 lg:text-base text-xs leading-7">
             Here is the breakdown of the time we anticipate
             <br /> using for the upcoming event.
           </div>
         </div>
 
-        <div className="relative container mx-auto px-6 flex flex-col gap-2 my-[90px]">
+        <div className="relative container mx-auto px-6 lg:flex flex-col gap-2 my-[90px] hidden ">
           {timeLine.map((timeline, index) => {
             const isEven = index % 2 === 0;
             if (isEven)
@@ -62,6 +62,51 @@ const Timeline = () => {
                     </div>
                     <div className="leading-6 pt-3">{timeline.desc}</div>
                   </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="relative container mx-auto flex flex-col gap-[45px] my-[90px] lg:hidden ">
+          {timeLine.map((timeline, index) => {
+            const isEven = index % 2 === 0;
+            if (isEven)
+              return (
+                <div className="flex justify-start relative" key={timeline.id}>
+                  <div className="flex justify-start flex-col items-center gap-4">
+                    <div className="h-[100px] w-1 bg-fuchsia-500 md:mx-auto"></div>
+                    <div className=" lg:text-2xl text-base font-bold w-10 h-10 flex justify-center items-center bg-gradient-to-l from-purple-600 to-fuchsia-500 rounded-full xs:absolute md:mx-auto md:left-0 md:right-0">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-2 left-[50px] text-xs font-bold text-fuchsia-500">
+                    {timeline.date}
+                  </div>
+                  <div className="absolute top-[5px] left-[50px] text-xs">
+                    <div className="text-fuchsia-500 font-bold pb-1">
+                      {timeline.title}
+                    </div>
+                    <div className=" leading-5">{timeline.desc}</div>
+                  </div>
+                </div>
+              );
+            return (
+              <div className="flex justify-start relative" key={timeline.id}>
+                <div className="flex justify-start flex-col items-center gap-4">
+                  <div className="h-[100px] w-1 bg-fuchsia-500 md:mx-auto"></div>
+                  <div className=" lg:text-2xl text-base font-bold w-10 h-10 flex justify-center items-center bg-gradient-to-l from-purple-600 to-fuchsia-500 rounded-full xs:absolute md:mx-auto md:left-0 md:right-0">
+                    {index + 1}
+                  </div>
+                </div>
+                <div className="absolute bottom-2 left-[50px] text-xs font-bold text-fuchsia-500">
+                  {timeline.date}
+                </div>
+                <div className="absolute top-[5px] left-[50px] text-xs">
+                  <div className="text-fuchsia-500 font-bold pb-1">
+                    {timeline.title}
+                  </div>
+                  <div className=" leading-5">{timeline.desc}</div>
                 </div>
               </div>
             );
