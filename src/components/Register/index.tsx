@@ -8,6 +8,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { categoryList } from "@/src/api";
 import toast from "react-hot-toast";
 import { register } from "@/src/api";
+import SuccessModal from "../SuccessModal";
+import { AnimatePresence } from "framer-motion";
 
 const RegisterSection = () => {
   const [categories, setCategories] = useState("");
@@ -15,7 +17,7 @@ const RegisterSection = () => {
   const [checked, setChecked] = React.useState(false);
   const [categoryData, setCateGoryData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [modalOpen, setModalOpen] = useState(false);
   const [size, setSize] = useState("");
 
   const opt = categoryData.map((item: any) => {
@@ -28,13 +30,18 @@ const RegisterSection = () => {
     { value: "30", label: "30" },
   ];
 
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
+
+    open();
 
     if (Object.keys(values).length == 0) {
       return toast.error("make sure all input fields are not empty");
     }
+    setIsLoading(true);
     //@ts-ignore
     const { team_name, email, phone, topic } = values;
     const inputData = {
@@ -225,6 +232,15 @@ const RegisterSection = () => {
                 </button>
               </div>
             </form>
+            <AnimatePresence mode="wait">
+              {modalOpen && (
+                <SuccessModal
+                  key="modal"
+                  modalOpen={modalOpen}
+                  handleClose={close}
+                />
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>
