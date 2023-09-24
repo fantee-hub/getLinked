@@ -90,7 +90,9 @@ const Nav = () => {
                 <li>Timeline</li>
                 <li>Overview</li>
                 <li>FAQs</li>
-                <li>Contact</li>
+                <Link href="/contact">
+                  <li>Contact</li>
+                </Link>
                 <li className="rounded bg-gradient-to-l from-purple-600 via-fuchsia-500 to-pink-500 w-44 h-14 flex items-center justify-center hover:bg-gradient-to-r">
                   Register
                 </li>
