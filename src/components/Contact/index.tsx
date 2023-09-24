@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   FaXTwitter,
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa6";
+import { PiCaretLeftBold } from "react-icons/pi";
 import flare1 from "../../../public/assets/images/contact-flare.png";
 import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG-4.png";
 import toast from "react-hot-toast";
@@ -15,6 +17,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 const ContactPage = () => {
   const [values, setValues] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -52,7 +55,7 @@ const ContactPage = () => {
   console.log(values);
   return (
     <section className="py-[70px] relative px-10 overflow-hidden">
-      <div className="absolute left-0 top-[-150px] opacity-50 w-full bg-[#150E28] -z-30 h-full">
+      <div className="absolute left-0 top-[-150px] opacity-50 bg-[#150E28] -z-30">
         <img src={flare1.src} alt="flare" />
       </div>
       <div className="absolute bottom-[-300px] right-0 opacity-50 -z-30 overflow-hidden bg-[#150E28]">
@@ -60,7 +63,7 @@ const ContactPage = () => {
       </div>
 
       <div className="flex justify-center gap-[200px] relative">
-        <div className="mt-10">
+        <div className="mt-10 lg:block hidden">
           <div className="font-tt-clashDisplay text-[32px] font-semibold text-fuchsia-500 pb-4">
             Get in touch
           </div>
@@ -100,20 +103,61 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white bg-opacity-5 rounded-xl shadow pt-[75px] pb-[67px] px-[90px]">
-          <div className="font-tt-clashDisplay text-fuchsia-500 text-xl font-semibold pb-8">
+        <div className="lg:bg-white lg:bg-opacity-5 bg-opacity-1 fixed w-full lg:w-auto h-screen top-0 bottom-0 z-[999] lg:static bg-[#140D27] rounded-xl shadow lg:pt-[75px] pt-[67px] pb-[67px] lg:px-[90px] px-10 overflow-auto lg:overflow-hidden">
+          <div className="pb-10 lg:hidden block" onClick={() => router.back()}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+            >
+              <circle
+                cx="11.5"
+                cy="11.5"
+                r="11"
+                stroke="url(#paint0_linear_177_298)"
+              />
+              <path
+                d="M12.2666 9.20001L9.19995 12.2667L12.2666 14.5667"
+                stroke="white"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_177_298"
+                  x1="11.5"
+                  y1="0"
+                  x2="11.5"
+                  y2="23"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#903AFF" />
+                  <stop offset="1" stop-color="#FF26B9" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="font-tt-clashDisplay text-fuchsia-500 text-xl font-semibold lg:pb-8 pb-6 max-w-[30rem] mx-auto lg:max-w-full">
             <div>Questions or need assistance?</div>
             <div>Let us know about it!</div>
           </div>
+          <div className="lg:hidden block text-xs pb-7">
+            Email us below to any question related
+            <br />
+            to our event
+          </div>
 
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={handleSubmit}
+            className="max-w-[30rem] mx-auto lg:max-w-full"
+          >
             <div className="flex flex-col gap-11">
               <div>
                 <input
                   type="text"
                   name="firstName"
                   id="firstname"
-                  className="w-96 h-12 bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
+                  className="lg:w-96 h-12 w-full bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
                   placeholder="First Name"
                   onChange={handleInputChange}
                 />
@@ -123,7 +167,7 @@ const ContactPage = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="w-96 h-12 bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
+                  className="lg:w-96 h-12 w-full bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
                   placeholder="Mail"
                   onChange={handleInputChange}
                 />
@@ -133,7 +177,7 @@ const ContactPage = () => {
                   type="text"
                   name="phone"
                   id="phone"
-                  className="w-96 h-12 bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
+                  className="lg:w-96 h-12 w-full bg-white bg-opacity-5 rounded shadow border border-white outline-none px-7 py-4 placeholder:text-white"
                   placeholder="Phone Number"
                   onChange={handleInputChange}
                 />
@@ -142,7 +186,7 @@ const ContactPage = () => {
                 <textarea
                   name="message"
                   id="message"
-                  className="w-96 h-28 bg-white bg-opacity-5 rounded shadow border border-white outline-none px-4 py-2 placeholder:text-white resize-none"
+                  className="lg:w-96 h-28 w-full bg-white bg-opacity-5 rounded shadow border border-white outline-none px-4 py-2 placeholder:text-white resize-none"
                   placeholder="Message"
                   onChange={handleInputChange}
                 ></textarea>
@@ -161,6 +205,23 @@ const ContactPage = () => {
                   )}
                   Submit
                 </button>
+              </div>
+              <div className="lg:hidden block text-center">
+                <div className="text-fuchsia-500 pb-4">Share on</div>
+                <div className="flex gap-5 items-center text-2xl justify-center">
+                  <span className="hover:text-fuchsia-500 duration-150 cursor-pointer hover:scale-[1.2]">
+                    <FaInstagram />
+                  </span>
+                  <span className="hover:text-fuchsia-500 duration-150 cursor-pointer hover:scale-[1.2]">
+                    <FaXTwitter />
+                  </span>
+                  <span className="hover:text-fuchsia-500 duration-150 cursor-pointer hover:scale-[1.2]">
+                    <FaFacebookF />
+                  </span>
+                  <span className="hover:text-fuchsia-500 duration-150 cursor-pointer hover:scale-[1.2]">
+                    <FaLinkedinIn />
+                  </span>
+                </div>
               </div>
             </div>
           </form>
