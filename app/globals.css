@@ -72,6 +72,12 @@
     background-color: white;
     color: #fff;
   }
+  .flare {
+    background: url("../public/assets/images/mobile-flare1.png"),
+      lightgray -184.527px 3.278px / 146.745% 105.327% no-repeat;
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+  }
   body {
     @apply text-white bg-[#150E28] font-normal max-w-[2200px] mx-auto font-montserrat;
   }

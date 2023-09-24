@@ -7,7 +7,9 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa6";
-import { PiCaretLeftBold } from "react-icons/pi";
+import star2 from "../../../public/assets/icons/star pu.svg";
+import fadeStar from "../../../public/assets/icons/star-faded.svg";
+import star from "../../../public/assets/icons/star.svg";
 import flare1 from "../../../public/assets/images/contact-flare.png";
 import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG-4.png";
 import toast from "react-hot-toast";
@@ -104,7 +106,8 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="lg:bg-white lg:bg-opacity-5 bg-opacity-1 fixed w-full lg:w-auto h-screen top-0 bottom-0 z-[999] lg:static bg-[#140D27] rounded-xl shadow lg:pt-[75px] pt-[67px] pb-[67px] lg:px-[90px] px-10 overflow-auto lg:overflow-hidden">
+
+        <div className="lg:bg-white lg:bg-opacity-5 flare bg-opacity-1 fixed w-full lg:w-auto h-screen top-0 bottom-0 z-[999] lg:static bg-[#140D27] rounded-xl shadow lg:pt-[75px] pt-[67px] pb-[67px] lg:px-[90px] px-10 overflow-auto lg:overflow-hidden">
           <div className="pb-10 lg:hidden block" onClick={() => router.back()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +141,13 @@ const ContactPage = () => {
               </defs>
             </svg>
           </div>
-          <div className="font-tt-clashDisplay text-fuchsia-500 text-xl font-semibold lg:pb-8 pb-6 max-w-[30rem] mx-auto lg:max-w-full">
+          <div className="font-tt-clashDisplay text-fuchsia-500 text-xl font-semibold lg:pb-8 pb-6 max-w-[30rem] mx-auto lg:max-w-full relative">
+            <div className="absolute left-20 top-[-50px]">
+              <img src={star2.src} alt="star" className="w-5 h-5" />
+            </div>
+            <div className="absolute right-0 bottom-0">
+              <img src={fadeStar.src} alt="star" className="w-5 h-5" />
+            </div>
             <div>Questions or need assistance?</div>
             <div>Let us know about it!</div>
           </div>
