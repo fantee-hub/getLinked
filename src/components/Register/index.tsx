@@ -57,7 +57,7 @@ const RegisterSection = () => {
       const data = await register(inputData);
       if (data) {
         setIsLoading(false);
-        toast.success("Registered Successfully");
+        // toast.success("Registered Successfully");
         e.target.reset();
         setIsLoading(false);
         open();
