@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import illustration from "../../../public/assets/images/illustration-2.png";
 import flare1 from "../../../public/assets/images/Purple-Lens-Flare-PNG-3.png";
@@ -6,6 +7,8 @@ import fadeStar from "../../../public/assets/icons/star-faded.svg";
 import star2 from "../../../public/assets/icons/star pu.svg";
 import star from "../../../public/assets/icons/star.svg";
 import { keyAttributes } from "@/src/utils";
+import { motion } from "framer-motion";
+import { elementList, fadeIn, letterAnimation } from "@/src/utils";
 
 const Criteria = () => {
   return (
@@ -16,8 +19,13 @@ const Criteria = () => {
       <div className="absolute bottom-[-400px] right-0 opacity-40 -z-30">
         <img src={flare2.src} alt="star" />
       </div>
-      <div className="flex items-center justify-center gap-[53px] flex-col lg:flex-row">
-        <div className=" relative">
+      <motion.div
+        variants={elementList}
+        initial="initial"
+        whileInView="animate"
+        className="flex items-center justify-center gap-[53px] flex-col lg:flex-row"
+      >
+        <motion.div variants={fadeIn} custom={0} className=" relative">
           <div className="absolute top-[-78px] left-[150px]">
             <img src={star2.src} alt="star" />
           </div>
@@ -28,13 +36,16 @@ const Criteria = () => {
           <div className="absolute bottom-[300px] right-[300px]">
             <img src={fadeStar.src} alt="star" />
           </div>
-        </div>
+        </motion.div>
         <div className="text-center lg:text-left">
-          <div className="font-tt-clashDisplay lg:text-[32px] text-xl font-bold lg:leading-10">
-            Judging Criteria
-            <br />
-            <span className="text-[#D434FE]">Key attributes</span>
-          </div>
+          <motion.div className="overflow-hidden font-tt-clashDisplay lg:text-[32px] text-xl font-bold lg:leading-10">
+            <motion.div variants={letterAnimation} className="">
+              Judging Criteria
+            </motion.div>
+            <motion.div variants={letterAnimation} className="text-[#D434FE]">
+              Key attributes
+            </motion.div>
+          </motion.div>
           {keyAttributes.map((attr) => (
             <div key={attr.id}>
               <div className="max-w-[535px] mx-auto font-montserrat lg:leading-7 leading-7 mt-4 lg:text-sm text-xs">
@@ -51,7 +62,7 @@ const Criteria = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

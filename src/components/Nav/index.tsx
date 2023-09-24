@@ -47,7 +47,16 @@ const Nav = () => {
           </LinkToComponent>
 
           <li>Overview</li>
-          <li>FAQs</li>
+          <LinkToComponent
+            activeClass="active"
+            to="faq"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <li className="cursor-pointer hover:nav-active">FAQs</li>
+          </LinkToComponent>
           <Link href="/contact">
             <li className={`${pathname === "/contact" ? "nav-active" : ""}`}>
               Contact
