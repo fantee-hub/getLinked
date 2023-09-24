@@ -36,8 +36,6 @@ const RegisterSection = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    open();
-
     if (Object.keys(values).length == 0) {
       return toast.error("make sure all input fields are not empty");
     }
@@ -62,6 +60,7 @@ const RegisterSection = () => {
         toast.success("Registered Successfully");
         e.target.reset();
         setIsLoading(false);
+        open();
       }
     } catch (e: any) {
       setIsLoading(false);
