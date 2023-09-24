@@ -91,7 +91,7 @@ const RegisterSection = () => {
 
   return (
     <section className="py-[70px] relative lg:px-10 px-0 overflow-hidden">
-      <div className="fixed flare py-[67px] px-5 lg:p-0 w-full h-screen overflow-auto top-0 bottom-0 bg-[#140D27] z-[999] lg:static lg:bg-transparent lg:overflow-hidden">
+      <div className="fixed flare py-[67px] px-5 lg:p-0 w-full h-screen overflow-auto top-0 bottom-0 bg-[#140D27] z-[999] lg:static lg:bg-transparent lg:overflow-hidden lg:h-auto">
         <div className="lg:hidden text-sm text-fuchsia-500 font-bold px-5 pb-5 flex justify-start">
           Register
         </div>
@@ -99,7 +99,7 @@ const RegisterSection = () => {
           <div>
             <img src={illustration.src} alt="illustration" />
           </div>
-          <div className="lg:bg-white lg:bg-opacity-5 bg-opacity-1 bg-transparent rounded-xl  shadow lg:pt-[75px] pt-5 pb-[67px] lg:px-[90px] px-4 max-w-[30rem] mx-auto lg:max-w-full">
+          <div className="lg:bg-white lg:bg-opacity-5 bg-opacity-1 bg-transparent rounded-xl shadow lg:pt-[75px] pt-5 pb-[67px] lg:px-[90px] px-4 max-w-[30rem] mx-auto lg:max-w-full">
             <div className="text-[32px] font-tt-clashDisplay font-semibold text-fuchsia-500 pb-11 hidden lg:block">
               Register
             </div>
