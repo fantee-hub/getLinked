@@ -1,5 +1,7 @@
 import React from "react";
 import { Collapse } from "react-collapse";
+import { motion } from "framer-motion";
+import { staggerChildren } from "@/src/utils";
 
 const Accordion = ({ children, num, setOpen, curOpen, title }: any) => {
   const isOpen = num === curOpen;
@@ -8,7 +10,7 @@ const Accordion = ({ children, num, setOpen, curOpen, title }: any) => {
     setOpen(isOpen ? false : num);
   };
   return (
-    <div>
+    <motion.div variants={staggerChildren} custom={num}>
       <div
         onClick={handleToggle}
         className={`cursor-pointer pb-[13px] flex justify-between border-b border-fuchsia-500  ${
@@ -23,7 +25,7 @@ const Accordion = ({ children, num, setOpen, curOpen, title }: any) => {
       <Collapse isOpened={isOpen}>
         <div className="pt-[13px] leading-7">{children}</div>
       </Collapse>
-    </div>
+    </motion.div>
   );
 };
 
