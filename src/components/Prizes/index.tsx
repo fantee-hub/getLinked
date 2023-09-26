@@ -1,10 +1,18 @@
 import React from "react";
 import illustration from "../../../public/assets/images/illustration-4.png";
 import { prizes } from "@/src/utils";
+import flare1 from "../../../public/assets/images/Purple-Lens-Flare-PNG.png";
+import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG 2.png";
 
 const Prizes = () => {
   return (
-    <section className="px-10 border-b border-white border-opacity-20 relative py-[70px] ">
+    <section className="px-10 border-b border-white border-opacity-20 relative py-[70px]">
+      <div className="absolute top-[-250px] left-[-50px] opacity-50 -z-30">
+        <img src={flare1.src} alt="flare" className="w-full" />
+      </div>
+      <div className="absolute top-[200px] right-[0px] opacity-50 -z-30">
+        <img src={flare2.src} alt="flare" className="w-full" />
+      </div>
       <div className="max-w-[1222px] mx-auto">
         <div className="font-tt-clashDisplay lg:text-[32px] font-bold max-w-[25rem] mx-auto lg:hidden block text-center text-xl">
           Prizes and
@@ -47,7 +55,7 @@ const Prizes = () => {
                       alt="prizes"
                       className={`${
                         prize.title === "1st"
-                          ? "lg:max-w-[288px] h-32 max-w-[128px]  lg:h-72 lg:top-[-170px] top-[-106px]"
+                          ? "lg:max-w-[288px] h-32 max-w-[128px]  lg:h-72 lg:top-[-170px] top-[-100px]"
                           : "lg:max-w-[176px] max-w-[80px] lg:h-44 h-20 "
                       } object-cover lg:top-[-150px] top-[-80px]`}
                     />
