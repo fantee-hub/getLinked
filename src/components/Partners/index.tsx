@@ -1,8 +1,15 @@
 import React from "react";
-import { partnersImages } from "@/src/utils";
+import flare1 from "../../../public/assets/images/Purple-Lens-Flare-PNG.png";
+import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG 2.png";
 const Partners = () => {
   return (
-    <section className="px-10 border-b border-white border-opacity-20 py-[78px]">
+    <section className="px-10 border-b border-white border-opacity-20 py-[78px] relative">
+      <div className="absolute top-[-250px] left-[-250px] opacity-50 -z-30">
+        <img src={flare1.src} alt="flare" className="w-full" />
+      </div>
+      <div className="absolute top-[400px] right-[0px] opacity-50 -z-30">
+        <img src={flare2.src} alt="flare" className="w-full" />
+      </div>
       <div className="text-center flex flex-col gap-5">
         <div className="lg:text-[32px] text-xl font-bold font-tt-clashDisplay lg:leading-7 leading-7">
           Partners and Sponsors
