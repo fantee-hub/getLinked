@@ -5,6 +5,8 @@ import flare1 from "../../../public/assets/images/Purple-Lens-Flare-PNG.png";
 import flare2 from "../../../public/assets/images/Purple-Lens-Flare-PNG 2.png";
 import { motion } from "framer-motion";
 import { elementList, fadeIn, letterAnimation } from "@/src/utils";
+import star from "../../../public/assets/icons/star.svg";
+import fadeStar from "../../../public/assets/icons/star-faded.svg";
 
 const Rules = () => {
   return (
@@ -21,7 +23,13 @@ const Rules = () => {
         whileInView="animate"
         className="flex items-center justify-center flex-col-reverse lg:flex-row"
       >
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left relative">
+          <div className="absolute -top-20 right-[200px]">
+            <img src={fadeStar.src} alt="" />
+          </div>
+          <div className="absolute -bottom-10 -right-10">
+            <img src={star.src} alt="" />
+          </div>
           <motion.div className="overflow-hidden font-tt-clashDisplay lg:text-[32px] font-bold text-xl lg:leading-10">
             <motion.div variants={letterAnimation} className="">
               Rules and
