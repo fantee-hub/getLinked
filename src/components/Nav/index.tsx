@@ -105,9 +105,57 @@ const Nav = () => {
           >
             <div className="h-full flex flex-col justify-between ">
               <ul className="flex flex-col gap-5 py-[150px] pl-[47px]">
-                <li>Timeline</li>
-                <li>Overview</li>
-                <li>FAQs</li>
+                <LinkToComponent
+                  activeClass="active"
+                  to="timeline"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <li
+                    className="cursor-pointer hover:nav-active"
+                    onClick={() => {
+                      setIsActive(false);
+                    }}
+                  >
+                    Timeline
+                  </li>
+                </LinkToComponent>
+                <LinkToComponent
+                  activeClass="active"
+                  to="overview"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <li
+                    className="cursor-pointer hover:nav-active"
+                    onClick={() => {
+                      setIsActive(false);
+                    }}
+                  >
+                    Overview
+                  </li>
+                </LinkToComponent>
+                <LinkToComponent
+                  activeClass="active"
+                  to="faq"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <li
+                    className="cursor-pointer hover:nav-active"
+                    onClick={() => {
+                      setIsActive(false);
+                    }}
+                  >
+                    FAQs
+                  </li>
+                </LinkToComponent>
                 <Link href="/contact">
                   <li>Contact</li>
                 </Link>
